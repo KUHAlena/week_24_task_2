@@ -1,0 +1,25 @@
+.table-container {
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 1200px;
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  
+    th,
+    td {
+      padding: 0.8rem;
+      text-align: center;
+      border: 1px solid #c469eb79;
+    }
+  
+    th {
+      background: #0e654d;
+      color: #fff;
+      font-size: 1.2rem;
+    }
+  }
+  

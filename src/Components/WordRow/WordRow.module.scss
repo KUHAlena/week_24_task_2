@@ -1,0 +1,34 @@
+.actions {
+  button {
+    margin: 0 0.2rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &.edit-btn {
+      background: #ffc107;
+      color: black;
+    }
+
+    &.delete-btn {
+      background: #97170d;
+      color: white;
+    }
+
+    &.save-btn {
+      background: #4caf50;
+      color: white;
+    }
+
+    &.cancel-btn {
+      background: #9e9e9e;
+      color: white; 
+    }
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
