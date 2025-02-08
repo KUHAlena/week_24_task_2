@@ -1,12 +1,13 @@
-import { useState } from 'react';
+import { useState } from "react";
 import WordTable from "../Components/WordTable/WordTable.jsx";
+import WordCarousel from "../Components/WordCarousel/WordCarousel.jsx";
 import "../styles/styles.scss";
-import WordCard from '../Components/WordCard/WordCard.jsx';
 
 const initialWords = [
   { id: 1, english: "measure", transcription: "[ˈmeʒ.əɹ]", russian: "мера" },
   { id: 2, english: "fire", transcription: "[faɪə]", russian: "огонь" },
   { id: 3, english: "island", transcription: "[ˈaɪ.lənd]", russian: "остров" },
+  { id: 4, english: "stork", transcription: "[stɔːk]", russian: "аист" }
 ];
 
 function App() {
@@ -25,8 +26,10 @@ function App() {
       <header>
         <h1>Word List</h1>
       </header>
-      <WordTable words={words} updateWord={updateWord} deleteWord={deleteWord} />
-      <WordCard english="stork" transcription="[stɔːk]" russian="аист" />
+      <div className="content">
+        <WordTable words={words} updateWord={updateWord} deleteWord={deleteWord} />
+        <WordCarousel words={words} />
+      </div>
     </div>
   );
 }

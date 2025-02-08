@@ -1,28 +1,22 @@
-import React, { useState } from 'react';
-import styles from './WordCard.module.scss';
 
-const WordCard = ({ english, transcription, russian }) => {
-const [isTranslationVisible, setIsTranslationVisible] = useState(false);
+import styles from "./WordCard.module.scss";
 
-const handleCheckClick = () => {
-    setIsTranslationVisible(true);
-};
-
-return (
+const WordCard = ({ english, transcription, russian, isTranslationVisible, onCheck }) => {
+  return (
     <div className={styles.card}>
-    <div>
+      <div>
         <h2>{english}</h2>
         <p>{transcription}</p>
-    </div>
-    {isTranslationVisible ? (
+      </div>
+      {isTranslationVisible ? (
         <p className={styles.translation}>{russian}</p>
-    ) : (
-        <button onClick={handleCheckClick} className={styles.checkButton}>
-        Проверить
+      ) : (
+        <button onClick={onCheck} className={styles.checkButton}>
+          Проверить
         </button>
-    )}
+      )}
     </div>
-);
+  );
 };
 
 export default WordCard;
